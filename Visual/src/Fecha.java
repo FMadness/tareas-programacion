@@ -3,10 +3,12 @@ public class Fecha {
     private Integer d;
     private Integer m;
     private Integer a;
- public Fecha(Integer d, Integer m, Integer a){
+    private Integer da;
+ public Fecha(Integer d, Integer m, Integer a, Integer da){
      this.a=a;
      this.d=d;
      this.m=m;
+     this.da=da;
  }
 
     
@@ -60,6 +62,14 @@ public class Fecha {
     public Integer getAnio(){
        return a;
    }
+    
+    public void setDiasau(Integer diasau){
+        this.da=diasau;
+    }
+    public Integer getDiasau(){
+        return da;
+    }
+    
     public void Aumentar(){
       this.d++;
       if(this.d>diasMes()){
@@ -70,9 +80,16 @@ public class Fecha {
               this.a++;
               
           }
+          
       }
+      
         
         
    }
+    public void Aumentar (Integer n){
+        for(int i=0; i<n; i++){
+            this.Aumentar();
+        }
      
+}
 }

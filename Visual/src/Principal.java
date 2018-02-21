@@ -25,14 +25,15 @@ import java.util.Scanner;
         Integer mm=teclado.nextInt();
         System.out.println("Año:");
         Integer aa=teclado.nextInt();
-         
+         System.out.println("Dias aumentar");
+         Integer daa=teclado.nextInt();
       
          
-         Fecha f = new Fecha(dd,mm,aa);
+         Fecha f = new Fecha(dd,mm,aa,daa);
           f.setDia(dd);
           f.setMes(mm);
           f.setAnio(aa);
-          f.Aumentar();
+          f.Aumentar(daa);
         System.out.println(f);
     }
 }
